@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-AFIF for Academic Services | العفيف للخدمات الأكاديمية</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .arabic {
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            text-align: right;
+            display: none;
+        }
+        
+        .english {
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .bg-custom-gradient {
+            background: linear-gradient(to right, #1a365d, #2a4365);
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.03);
+            transition: all 0.2s ease;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-left: 4px solid #4C51BF;
+        }
+        
+        .ar-active .arabic {
+            display: block;
+        }
+        
+        .ar-active .english {
+            display: none;
+        }
+
+        .contact-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        @media print {
+            .page-break {
+                page-break-before: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl md:text-2xl font-bold text-indigo-900 english">
+                    Al-AFIF for Academic Services
+                </h1>
+                <h1 class="text-xl md:text-2xl font-bold text-indigo-900 arabic">
+                    العفيف للخدمات الأكاديمية
+                </h1>
+            </div>
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <button id="lang-switch" class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md hover:bg-indigo-200 transition">
+                    <span class="english">العربية</span>
+                    <span class="arabic">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-custom-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="english">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Partner in Academic Excellence and Research Success</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl">
+                    Al-AFIF for Academic Services provides comprehensive support for students and researchers. 
+                    From crafting compelling theses and dissertations to data analysis and publishing in prestigious journals, 
+                    we are here to guide you.
+                </p>
+            </div>
+            <div class="arabic">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">شريكك نحو التميز الأكاديمي والنجاح البحثي</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl">
+                    تقدم العفيف للخدمات الأكاديمية دعمًا شاملاً للطلاب والباحثين. بدءًا من صياغة رسائل الماجستير والدكتوراه المتميزة، 
+                    مرورًا بتحليل البيانات، ووصولاً إلى النشر في أرقى المجلات العالمية، نحن هنا لإرشادك.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- English Services -->
+            <div class="english">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-graduation-cap text-indigo-600"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">Writing Master's Theses</h3>
+                        </div>
+                        <p class="text-gray-600">Expert guidance and support for crafting high-quality Master's theses across various disciplines.</p>
+                    </div>
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-book-open text-indigo-600"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">Writing Doctoral Dissertations</h3>
+                        </div>
+                        <p class="text-gray-600">Comprehensive assistance in developing and refining doctoral dissertations to meet the highest academic standards.</p>
+                    </div>
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-chart-bar text-indigo-600"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">Data Analysis</h3>
+                        </div>
+                        <p class="text-gray-600">Advanced statistical analysis and data interpretation services to enhance the validity of your research findings.</p>
+                    </div>
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-journal-whills text-indigo-600"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">Publishing Research in Prestigious Journals</h3>
+                        </div>
+                        <p class="text-gray-600">Strategic guidance for publishing your research in high-impact, globally recognized academic journals.</p>
+                    </div>
+                </div>
+                <p class="mt-10 text-center text-lg text-gray-700">
+                    We also provide all other academic and research services and projects across all scientific and humanities disciplines.
+                </p>
+            </div>
+            
+            <!-- Arabic Services -->
+            <div class="arabic">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">خدماتنا</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">كتابة رسائل الماجستير</h3>
+                            <div class="mr-4 bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-graduation-cap text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">توجيه ودعم متخصص لصياغة رسائل ماجستير عالية الجودة في مختلف التخصصات.</p>
+                    </div>
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">إعداد أطروحات الدكتوراه</h3>
+                            <div class="mr-4 bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-book-open text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">مساعدة شاملة في تطوير وصقل أطروحات الدكتوراه لتلبية أعلى المعايير الأكاديمية.</p>
+                    </div>
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">تحليل البيانات</h3>
+                            <div class="mr-4 bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-chart-bar text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">خدمات التحليل الإحصائي المتقدم وتفسير البيانات لتعزيز صحة نتائج البحث الخاص بك.</p>
+                    </div>
+                    <div class="service-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+                        <div class="flex items-center mb-4">
+                            <h3 class="ml-4 text-xl font-semibold text-gray-800">النشر في المجلات العالمية المرموقة</h3>
+                            <div class="mr-4 bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-journal-whills text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">توجيه استراتيجي لنشر بحثك في المجلات الأكاديمية ذات التأثير العالي والمعترف بها عالمياً.</p>
+                    </div>
+                </div>
+                <p class="mt-10 text-center text-lg text-gray-700">
+                    كما نقدم كافة الخدمات والمشاريع الأكاديمية والبحثية الأخرى في جميع التخصصات العلمية والإنسانية.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="english">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Get in Touch</h2>
+            </div>
+            <div class="arabic">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">تواصل معنا</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- WhatsApp Buttons -->
+                <div class="mb-10">
+                    <h3 class="english text-xl font-semibold mb-4 text-center">Contact us via WhatsApp</h3>
+                    <h3 class="arabic text-xl font-semibold mb-4 text-center">تواصل معنا عبر الواتساب</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="https://wa.me/966508000196" target="_blank" class="whatsapp-button flex items-center justify-center bg-green-500 text-white py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition">
+                            <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                            <span class="english">WhatsApp (KSA)<br>+966 50 800 0196</span>
+                            <span class="arabic">واتساب (السعودية)<br>+966 50 800 0196</span>
+                        </a>
+                        <a href="https://wa.me/967782979392" target="_blank" class="whatsapp-button flex items-center justify-center bg-green-500 text-white py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition">
+                            <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                            <span class="english">WhatsApp (YEM)<br>+967 782 979 392</span>
+                            <span class="arabic">واتساب (اليمن)<br>+967 782 979 392</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Contact Methods -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <a href="mailto:hph9124@gmail.com" class="contact-icon inline-block mb-4 bg-blue-100 p-4 rounded-full">
+                            <i class="fas fa-envelope text-2xl text-blue-600"></i>
+                        </a>
+                        <h3 class="english text-lg font-semibold mb-2">Email Us</h3>
+                        <h3 class="arabic text-lg font-semibold mb-2">راسلنا عبر البريد الإلكتروني</h3>
+                        <a href="mailto:hph9124@gmail.com" class="text-blue-600 hover:underline">hph9124@gmail.com</a>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <a href="https://www.linkedin.com/in/mohammed-al-afif-0083091b4/" target="_blank" class="contact-icon inline-block mb-4 bg-blue-100 p-4 rounded-full">
+                            <i class="fab fa-linkedin-in text-2xl text-blue-600"></i>
+                        </a>
+                        <h3 class="english text-lg font-semibold mb-2">Connect on LinkedIn</h3>
+                        <h3 class="arabic text-lg font-semibold mb-2">تواصل عبر لينكدإن</h3>
+                        <a href="https://www.linkedin.com/in/mohammed-al-afif-0083091b4/" target="_blank" class="text-blue-600 hover:underline">
+                            <span class="english">Mohammed Al-Afif</span>
+                            <span class="arabic">محمد العفيف</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="english">
+                <p>© <span id="currentYear"></span> Al-AFIF for Academic Services. All rights reserved.</p>
+            </div>
+            <div class="arabic">
+                <p>© <span id="currentYearAr"></span> العفيف للخدمات الأكاديمية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('currentYearAr').textContent = new Date().getFullYear();
+        
+        // Language switcher
+        document.getElementById('lang-switch').addEventListener('click', function() {
+            document.body.classList.toggle('ar-active');
+        });
+    </script>
+</body>
+</html>
